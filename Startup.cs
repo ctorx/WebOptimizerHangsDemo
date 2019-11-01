@@ -24,9 +24,6 @@ namespace WebOptimizerDemo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
-
-            services.AddMvc(options => options.EnableEndpointRouting = false);
-
             services.AddWebOptimizer();
         }
 
@@ -50,8 +47,6 @@ namespace WebOptimizerDemo
             app.UseRouting();
 
             app.UseAuthorization();
-
-            app.UseMvc();
 
             app.UseEndpoints(endpoints =>
             {
